@@ -1,5 +1,5 @@
 # Quadratic Equations Solver
-test1
+test2
 [TODO. There will be project description]
 
 # Project Goals
