@@ -1,24 +1,3 @@
-#!/usr/bin/env python3.6
-import subprocess
-import sys
-
-
-def run_test(filepath):
-    proc = subprocess.run(['python3.6', filepath],
-                          stdout=subprocess.PIPE,
-                          stderr=subprocess.STDOUT)
-    return proc.stdout.decode()
-
-
-def is_alltest_successful(out):
-    status_tests = out.split()[0]
-    print(status_tests)
-    return not ('E' in status_tests or 'F' in status_tests)
-
-
-if __name__ == '__main__':
-    filepath = 'tests.py'
-    out = run_test(filepath)
-    if is_alltest_successful(out):
-        sys.exit(0)
-    sys.exit(out)
+#!/bin/bash
+python3.6 tests.py
+exit "$?"
