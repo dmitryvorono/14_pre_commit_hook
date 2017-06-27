@@ -1,20 +1,19 @@
 # Pre-commit hook
 
-This project demonstrate git pre-commit hook
+This project demonstrate git pre-commit hook. Pre-commit hook is a convenient tool whick allows run some checks before commit and cancel commit if something went wrong.
 
 # How to install
 
-Copy file pre-commit in .git/hooks/
+To enable a hook script, put a file `pre-commit` from project folder to `.git/hooks`. Note file should be executable and without any extension.
 
 # Launch
 
-Сhange any file and commit:
+For illustration change any file, e.g. `README.MD` and try to commit:
 
 ```bash
-$ git add .
+$ git add README.MD
 $ git commit -m 'Test commit'
 ```
-
 Change will not commit because one tests is error. 
 
 # Project Goals
